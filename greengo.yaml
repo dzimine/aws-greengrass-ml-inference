@@ -1,0 +1,47 @@
+# Greeengrass Group definition file
+Group:
+  name: ML_infer
+Cores:
+  - name: ML_infer_core_1
+    key_path: ./certs
+    config_path: ./config
+    SyncShadow: False
+
+Lambdas:
+  - name: GreengrassImageClassification
+    handler: run.handler
+    package: lambdas/GreengrassImageClassification
+    alias: dev
+    greengrassConfig:
+      MemorySize: 128000 # Kb, ask AWS why
+      Timeout: 10 # Sec
+      Pinned: True # Set True for long-lived functions
+      Environment:
+        AccessSysfs: False
+        # TODO: add access to local file system for input
+        # ResourceAccessPolicies:
+          # - ResourceId: /vagrant/input
+          #  Permission: 'rw'
+        Variables:
+           WATCH_PATTERN: /input/*.jpeg
+
+  - name: HelloLongRunning
+    handler: function.handler
+    package: lambdas/HelloLongRunning
+    alias: dev
+    greengrassConfig:
+      MemorySize: 128000 # Kb, ask AWS why
+      Timeout: 10 # Sec
+      Pinned: True
+      Environment:
+        Variables:
+           INTERVAL: '5'
+
+# Subscriptions: # not implemented
+  # - Source: Lambda::GreengrassImageClassification
+  #   Subject: hello/world
+  #   Target: cloud
+  # - Source: cloud
+  #   Subject: hello/world
+  #   Target: Lambda::GreengrassImageClassification
+
