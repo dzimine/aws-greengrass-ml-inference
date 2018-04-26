@@ -2,7 +2,7 @@
 
 This codifies [AWS ML inference tutorial](https://docs.aws.amazon.com/greengrass/latest/developerguide/ml-console.html). The intend is a consisten repeatable development environment for experimenting and enjoying Greengrass ML Inference.
 
-* Instead of using AWS Console, Python/BotoCLI is used via [Greengo](http://greengo.io)
+* Instead of using AWS Console, resource defined in with [Greengo](http://greengo.io) and created with Python/Boto3.
 * Instead of Raspberry PI, a Ubuntu VM.
 * Instead of a camera, images are dropped to an `/images` folder in a VM. The ML inference Lambda function
   uses access to local volume to read the images.
