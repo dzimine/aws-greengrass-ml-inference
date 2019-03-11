@@ -7,7 +7,15 @@ This codifies [AWS ML inference tutorial](https://docs.aws.amazon.com/greengrass
 * Instead of a camera, images are dropped to an `/images` folder in a VM. The ML inference Lambda function
   uses access to local volume to read the images.
 
+### Pre-requisits
 
+* A computer with Linux/MacOS, Python, git (dah!)
+* [Vagrant](https://www.vagrantup.com/docs/installation/) with [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+* AWS CLI [installed](http://docs.aws.amazon.com/cli/latest/userguide/installing.html) and credentials
+  [configured](http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html).
+  Consider using [named profiles](https://docs.aws.amazon.com/cli/latest/userguide/cli-multiple-profiles.html).
+
+### How to run
 The instructions below is a rough draft that gives direction and can work with the right amount of extra hacking.
 
 > Read to the end before attempting to run.
