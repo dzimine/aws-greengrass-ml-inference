@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo "Reseting Greengrass Core for a new group."
 
 echo "Copy certificates..."

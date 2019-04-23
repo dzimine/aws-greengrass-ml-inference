@@ -1,3 +1,8 @@
+#!/bin/bash
+#
+# Run this script inside Vagrant VM, as SUDO, from /vagrant/scripts directory.
+# It will be feeding images for GreengrassImageClassification Lambda.
+
 files=(../images/*.jpg)
 
 RANDOM=$$$(date +%s)
