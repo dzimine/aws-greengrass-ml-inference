@@ -9,6 +9,7 @@ Cores:
 
 Lambdas:
   - name: GreengrassImageClassification
+    runtime: python2.7
     handler: run.handler
     package: lambdas/GreengrassImageClassification
     alias: dev
@@ -25,6 +26,7 @@ Lambdas:
            WATCH_PATTERN: /input/*.jpeg
 
   - name: HelloLongRunning
+    runtime: python2.7
     handler: function.handler
     package: lambdas/HelloLongRunning
     alias: dev
