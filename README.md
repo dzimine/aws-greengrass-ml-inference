@@ -1,9 +1,9 @@
 # AWS Greengrass ML Inference Playground
 
-This codifies [AWS ML inference tutorial](https://docs.aws.amazon.com/greengrass/latest/developerguide/ml-console.html). The intend is a consisten repeatable development environment for experimenting and enjoying Greengrass ML Inference.
+This codifies [AWS ML inference tutorial](https://docs.aws.amazon.com/greengrass/latest/developerguide/ml-console.html). The intend is a consistent repeatable development environment for experimenting and enjoying Greengrass ML Inference.
 
 * Instead of using AWS Console, resource defined in with [Greengo](http://greengo.io) and created with Python/Boto3.
-* Instead of Raspberry PI, a Ubuntu VM.
+* Instead of Raspberry PI, a Ubuntu VM with Vagrant.
 * Instead of a camera, images are dropped to an `/images` folder in a VM. The ML inference Lambda function
   uses access to local volume to read the images.
 
@@ -41,8 +41,6 @@ The instructions below is a rough draft that gives direction and can work with t
     ```
     vagrant up
     ```
-    Ah, and before you run it, you should place `greengrass-ubuntu-x86-64-VERSION.tar.gz` into `./downloads`.
-    What? You already run it? You should have read the instruction to the end!
 
 4. Deploy Greengrass Core
 
